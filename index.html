@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
+        <!-- <script src="./index.js"></script> -->
+    </head>
+    <style>
+        body{
+            background-color: rgb(142, 193, 238);
+        }
+           
+        H2 {
+         background-color: rgb(142, 193, 238);
+        }
+        p{
+            font-size: small;
+        }
+    /* .bg-img{ */
+        /* background-image: url("Blue.jpg"); */
+        /* border: 50px; */
+
+    /* } */
+    .container{
+        Height: 150vh;
+        width: 70vw;
+        position: relative;  
+        border-radius: 10px;
+        margin: 175px;
+        margin-top: -5px;
+        background-color: aliceblue;
+        justify-content: center; 
+    }
+   
+    </style>
+
+    <body>
+
+        <div class="container">
+            <br>
+    <h2>Student Data Form</h2>
+            <p>*Please fill in all the necessary informartion in the provided spaces below and double check before submitting the form.</p>
+
+        <label for="fname">Name/s:</label>
+        <br>
+        <input type="text" id="Name" name="fname">
+        <br>
+        <label for="lname">Surname:</label>
+        <br>
+        <input type="text" id="Surname" name="fname">
+        <br>
+        <label for="contacts">Contacts:</label>
+        <br>
+        <input type="text" id="contacts" name="Contacts">
+        <br>
+        <label for="email">Email:</label>
+        <br>
+        <input type="text" id="email" name="Email" placeholder="Phumie@gmail.com">
+        <br>
+        <p>Address:</p>
+        <textarea id="Address" name="address" rows="4" cols="50"></textarea>
+        <br>
+        <br>
+        <label for="Gendar">Gender:</label>
+        <br>
+        <input type="radio" value="Female" name="radio4" onclick="touch(this.value)">
+        <label for="no">Female</label>
+        <!-- <input type="radio" checked="checked" name="radio"> -->
+            <!-- <label for="yes">Female</label> -->
+        <br>
+        </label>
+        <input type="radio" value="Male" name="radio4" onclick="touch(this.value)">
+        <label for="no">Male</label>
+        <!-- <input type="radio" checked="checked" name="radio"> -->
+            <!-- <label for="Male">Male</label> -->
+            <br>
+            <br>
+        <label for="age">Age:</label>
+        <br>
+        <input type="radio" value="18 - 23" name="radio3" onclick="choose(this.value)">
+            <label for="no">18 - 23</label>
+        <!-- <input type="radio" id ="18-23" name="age between" value="18-23"> -->
+        <!-- <label for="18-23">18-23</label> -->
+        <br>
+        <input type="radio" value="24 - 29" name="radio3" onclick="choose(this.value)">
+            <label for="no">24 - 29</label>
+            
+        <!-- <input type="radio" id ="24-29-" name="age between" value="24-29"> -->
+        <!-- <label for="24-29">24-29</label> -->
+        <br>
+        <input type="radio" value="30 - 35" name="radio3" onclick="choose(this.value)">
+            <label for="no">30 - 35</label>
+        <!-- <input type="radio" id ="30-35" name="age between" value="30-35"> -->
+        <!-- <label for="30-35">30-35</label> -->
+        <br>
+        <br>
+
+        <h2>Academic background</h2>
+        
+        <label for="Qualificaton optained">Highest Qualificaton obtained:</label>
+        <br>
+        <input type="radio" value="NSC" name="radio2" onclick="Click(this.value)">
+        <label for="yes">NSC</label>
+        <!-- <input type="radio" id ="NSC" name="NSC" value="NSC"> -->
+        <!-- <label for="NSC">NSC</label> -->
+        <br>
+        <input type="radio" value="NC(V)" name="radio2" onclick="Click(this.value)">
+        <label for="yes">NC(V)</label>
+        <!-- <input type="radio" id ="NC(V)" name="NC(V)" value="NC(V)"> -->
+        <!-- <label for="NC(V)">NC(V)</label> -->
+        <br>
+        <input type="radio" value="National Diploma/Degree" name="radio2" onclick="Click(this.value)">
+        <label for="yes">National Diploma/Degree</label>
+        <!-- <input type="radio" id ="National Diploma/Degree" name="National Diploma" value="Diploma"> -->
+        <!-- <label for="National Diploma/Degree">National Diploma/Degree</label> -->
+        <br>
+        <input type="radio" value="Other" name="radio2" onclick="Click(this.value)">
+        <label for="yes">Other</label>
+        <!-- <input type="radio" id ="Other" name="Other" value="Other"> -->
+        <!-- <label for="Other">Other</label> -->
+        <br>
+        <br>
+        <label for="Subject">Subject/s Majored in:</label>
+        <br>
+        <input type="text" id="Subject" name="Subject Majored in">
+        <br>
+        <br>
+
+        <label for="Currently employed">Currently employed:</label>
+        <br>
+
+        <input type="radio" value="Yes" name="radio1" onclick="clicked(this.value)">
+            <label for="yes">Yes</label>
+        <br>
+        </label>
+        <input type="radio" value="No" name="radio1" onclick="clicked(this.value)">
+            <label for="no">No</label>
+            <br>
+
+        <br>
+        <form action>
+            <label for="Universities">Choose your Institution:</label>
+            <select id="Universities" name="Universities">
+                <option value="Durban University Of Technology">Durban University Of Technology</option>
+                <option value="University Of KwaZulu-Natal">University Of KwaZulu-Natal</option>
+                <option value="University Of Zululand">University Of Zululand</option>
+                <option value="Vaal University Of Technology">Vaal University Of Technology</option>
+                <option value="University Of South Africa">University Of South Africa</option>
+                <option value="University Of Johannesburg">University Of Johannesburg</option>
+            </select>
+        </form>
+        <br>
+        <br>
+        <button type= "button" onclick="Submit()">Submit</button>
+          </label>
+        
+    </form>
+    <script src="./index.js"></script>
+</body>
+</html>
